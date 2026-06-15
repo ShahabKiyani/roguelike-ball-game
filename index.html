@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Game</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel">
+        <p class="eyebrow">TypeScript Mini Game</p>
+        <h1>Square Dash</h1>
+        <p class="copy">
+          Collect the gold squares, avoid the red ones, and survive until the
+          timer ends.
+        </p>
+        <ul class="rules">
+          <li>Move with arrow keys or WASD.</li>
+          <li>Gold adds score and time.</li>
+          <li>Red drains score and time.</li>
+        </ul>
+        <div class="hud">
+          <div><span>Score</span><strong id="score">0</strong></div>
+          <div><span>Time</span><strong id="time">30</strong></div>
+          <div><span>Best</span><strong id="best">0</strong></div>
+        </div>
+        <button id="restart" type="button">Restart</button>
+      </section>
+      <section class="game-shell">
+        <canvas id="game" width="720" height="480" aria-label="Square Dash game"></canvas>
+        <div class="overlay" id="message">Press any movement key to begin</div>
+      </section>
+    </main>
+    <script type="module" src="./dist/game.js"></script>
+  </body>
+  </html>
